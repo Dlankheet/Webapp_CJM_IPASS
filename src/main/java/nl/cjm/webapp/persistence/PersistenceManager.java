@@ -8,13 +8,14 @@ import nl.cjm.webapp.model.Website;
 import java.io.*;
 
 public class PersistenceManager {
-    private final static String ENDPOINT = "https://cjmwebapp.dfs.core.windows.net/";
-    private final static String SASTOKEN = "?sv=2019-10-10&ss=b&srt=co&sp=rwdlacx&se=2021-05-31T02:04:03Z&st=2020-05-28T18:04:03Z&spr=https&sig=QSjThmo3H%2F5tvarrSg1YMcbRqxQR0MRqbevvXevwjzE%3D";
+    private final static String ENDPOINT = "https://cjmwebapp.blob.core.windows.net/";
+    private final static String SASTOKEN = "?sv=2019-10-10&ss=b&srt=co&sp=rwdlacx&se=2020-07-29T20:21:40Z&st=2020-05-31T12:21:40Z&spr=https&sig=vbAq6lfGLQ%2FHv2NI0i6vYI9Xp2opRjka4z2CQI5O1io%3D";
     private final static String CONTAINER = "websitecontainer";
     private static BlobContainerClient blobContainer = new BlobContainerClientBuilder().endpoint(ENDPOINT).sasToken(SASTOKEN).containerName(CONTAINER).buildClient();
     public static void loadWebsiteFromAzure() throws IOException, ClassNotFoundException {
+        System.out.println("Blob wordt ingeladen;");
         if(blobContainer.exists()) {
-            BlobClient blob = blobContainer.getBlobClient("world_blob");
+            BlobClient blob = blobContainer.getBlobClient("website_blob");
             if(blob.exists()){
                 ByteArrayOutputStream baos = new ByteArrayOutputStream();
                 blob.download(baos);
@@ -36,7 +37,7 @@ public class PersistenceManager {
         if(!blobContainer.exists()) {
             blobContainer.create();
         }
-        BlobClient blob = blobContainer.getBlobClient("world_blob");
+        BlobClient blob = blobContainer.getBlobClient("website_blob");
 
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -46,7 +47,7 @@ public class PersistenceManager {
 
         ByteArrayInputStream bais = new ByteArrayInputStream(bytez);
         blob.upload(bais, bytez.length, true);
-        System.out.println("World opgeslagen");
+        System.out.println("Website opgeslagen");
 
         baos.close();
         oos.close();

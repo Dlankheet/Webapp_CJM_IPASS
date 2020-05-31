@@ -1,6 +1,5 @@
 package nl.cjm.webservices;
 
-import nl.cjm.webapp.*;
 import nl.cjm.webapp.model.GastBlok;
 import nl.cjm.webapp.model.Website;
 
@@ -13,7 +12,7 @@ public class WebRecourse {
 
     @GET
     @Produces("application/json")
-    public String getCountries(){
+    public String getContactverzoek(){
         JsonArrayBuilder jab = Json.createArrayBuilder();
         JsonObjectBuilder job = Json.createObjectBuilder();
 
