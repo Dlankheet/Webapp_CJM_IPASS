@@ -5,6 +5,7 @@ import nl.cjm.webapp.model.Website;
 
 import javax.json.*;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Response;
 
 @Path("/contactaanvragen")
 public class WebRecourse {
@@ -12,7 +13,7 @@ public class WebRecourse {
 
     @GET
     @Produces("application/json")
-    public String getContactverzoek(){
+    public Response getContactverzoek(){
         JsonArrayBuilder jab = Json.createArrayBuilder();
         JsonObjectBuilder job = Json.createObjectBuilder();
 
