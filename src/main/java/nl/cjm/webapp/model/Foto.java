@@ -1,9 +1,10 @@
 package nl.cjm.webapp.model;
 
+import java.io.Serializable;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
-public class Foto {
+public class Foto implements Serializable {
     private Path padNaarFoto;
     private String altText;
     public Foto(String pad, String txt){

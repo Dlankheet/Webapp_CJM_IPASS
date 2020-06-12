@@ -1,10 +1,11 @@
 package nl.cjm.webapp.model;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.nio.file.Path;
 import java.util.ArrayList;
 
-public class Fotoslider {
+public class Fotoslider implements Serializable {
     private ArrayList<Foto> fotos = new ArrayList<>();
     public Fotoslider(Foto foto){
         fotos.add(foto);

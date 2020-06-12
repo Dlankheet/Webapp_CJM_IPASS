@@ -9,7 +9,7 @@ import java.io.*;
 
 public class PersistenceManager {
     private final static String ENDPOINT = "https://cjmwebapp.blob.core.windows.net/";
-    private final static String SASTOKEN = "?sv=2019-10-10&ss=b&srt=co&sp=rwdlacx&se=2020-07-29T20:21:40Z&st=2020-05-31T12:21:40Z&spr=https&sig=vbAq6lfGLQ%2FHv2NI0i6vYI9Xp2opRjka4z2CQI5O1io%3D";
+    private final static String SASTOKEN = "?sv=2019-10-10&ss=b&srt=co&sp=rwdlacx&se=2020-08-04T04:11:48Z&st=2020-06-08T20:11:48Z&spr=https&sig=DaxJgLkPi4MQ7HuCSwIg7IhH2OjTo6HiCE%2BTkOmc0do%3D";
     private final static String CONTAINER = "websitecontainer";
     private static BlobContainerClient blobContainer = new BlobContainerClientBuilder().endpoint(ENDPOINT).sasToken(SASTOKEN).containerName(CONTAINER).buildClient();
     public static void loadWebsiteFromAzure() throws IOException, ClassNotFoundException {

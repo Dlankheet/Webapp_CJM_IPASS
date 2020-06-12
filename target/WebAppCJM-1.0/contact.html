@@ -22,13 +22,13 @@
     <h1>Contactblok:</h1>
     <div class="contactpage">
         <div class="contactblok">
-            <form>
-                <p>Naam: </p><input type="text" id="fname" name="fname" placeholder="Uw voor en achternaam.">
-                <p>E-mail adres: </p><input type="text" id="fmail" name="fname" placeholder="Uw Email-adres">
-                <p>Telefoonnummer: </p><input type="text" id="fnummer" name="fname" placeholder="Uw telefoonnummer">
-                <p>Titel: </p><input type="text" id="ftitle" name="fname" placeholder="Reden voor contact">
-                <p>Beschrijving: </p><textarea id="fnote" name="fname" placeholder="Overige informatie" rows="4" cols="50"></textarea>
-                <input type="submit" value="Versturen">
+            <form id="contactenblok">
+                <p>Naam: </p><input type="text" id="name" name="name" placeholder="Uw voor en achternaam.">
+                <p>E-mail adres: </p><input type="text" id="fmail" name="fmail" placeholder="Uw Email-adres">
+                <p>Telefoonnummer: </p><input type="text" id="fnummer" name="fnummer" placeholder="Uw telefoonnummer">
+                <p>Titel: </p><input type="text" id="ftitle" name="ftitle" placeholder="Reden voor contact">
+                <p>Beschrijving: </p><textarea id="fnote" name="fnote" placeholder="Overige informatie" rows="4" cols="50"></textarea>
+                <input id="submitContact" type="submit" value="Versturen">
             </form>
         </div>
         <div class="vl"></div>
@@ -42,5 +42,6 @@
             like).</p></div>
     </div>
 </main>
+<script type="text/javascript" src="JavaScript/contactverzoekscript.js"></script>
 </body>
 </html>
