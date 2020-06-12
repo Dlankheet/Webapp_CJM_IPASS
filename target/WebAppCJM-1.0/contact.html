@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>CJM-support</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/contactstyle.css">
 </head>
 <body>
 <header>
@@ -19,27 +20,33 @@
 </header>
 
 <main>
-    <h1>Contactblok:</h1>
     <div class="contactpage">
         <div class="contactblok">
-            <form id="contactenblok">
-                <p>Naam: </p><input type="text" id="name" name="name" placeholder="Uw voor en achternaam.">
-                <p>E-mail adres: </p><input type="text" id="fmail" name="fmail" placeholder="Uw Email-adres">
-                <p>Telefoonnummer: </p><input type="text" id="fnummer" name="fnummer" placeholder="Uw telefoonnummer">
-                <p>Titel: </p><input type="text" id="ftitle" name="ftitle" placeholder="Reden voor contact">
-                <p>Beschrijving: </p><textarea id="fnote" name="fnote" placeholder="Overige informatie" rows="4" cols="50"></textarea>
+            <h1>Contactblok:</h1>
+            <form id="contactenblokform">
+                <input type="text" id="name" name="name" placeholder="Uw voor en achternaam.">
+                <input type="email" id="fmail" name="fmail" placeholder="Uw Email-adres">
+                <input minlength="10" maxlength="12" type="tel" id="fnummer" name="fnummer"
+                       placeholder="Uw telefoonnummer">
+                <input type="text" id="ftitle" name="ftitle" placeholder="Reden voor contact">
+                <textarea id="fnote" name="fnote" placeholder="Overige informatie (max 140 characters)" rows="4"
+                          cols="50" maxlength="140"></textarea>
                 <input id="submitContact" type="submit" value="Versturen">
             </form>
         </div>
         <div class="vl"></div>
         <div class="reviewblok">
-            <p>It is a long established fact that a reader will be distracted by the readable
-            content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
-            normal distribution of letters, as opposed to using 'Content here, content here', making it look like
-            readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
-            model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
-            versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the
-            like).</p></div>
+            <h1>Reviewblok:</h1>
+            <form id="reviewblokform">
+                <input type="text" id="name1" name="name" placeholder="Uw voor en achternaam.">
+                <input type="text" id="fmail1" name="fmail1" placeholder="Uw Email-adres">
+                <input type="text" id="fnummer1" name="fnummer1" placeholder="Uw telefoonnummer">
+                <input type="number" id="frating" min="1" max="5" placeholder="Aantal sterren">
+                <textarea id="fnote1" name="fnote1" placeholder="Overige mening (max 140 characters)" rows="4"
+                          cols="50" maxlength="140"></textarea>
+                <input id="submitReview" type="submit" value="Versturen">
+            </form>
+        </div>
     </div>
 </main>
 <script type="text/javascript" src="JavaScript/contactverzoekscript.js"></script>

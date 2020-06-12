@@ -1,0 +1,118 @@
+*{
+    margin: 0 0 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+header{
+    display: grid;
+    background-color: #f1932f;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+header > img{
+    margin-top: 10px;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.navbar > a {
+    display: flex;
+    background-color: #ef8717;
+    margin-left: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.navbar > a:hover{
+    background-color: #9b9b9b;
+}
+.catchphrase{
+    margin-top: 10px;
+    color: #9b9b9b;
+    font-size: 25px;
+    text-align: center;
+}
+.portal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 320px);
+}
+.portal > a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 30px;
+    width: 25%;
+    height: 40%;
+    color: #9B9B9B;
+    margin: 50px;
+    border-radius: 30px;
+    background-position: center;
+    background-size: cover;
+
+}
+.portal > a:hover{
+    background-image: url("images/lightchange.jpg");
+    box-shadow: 0 0 20px #9B9B9B;
+}
+.portal > a:first-child{
+    background-image: url("images/logo.jpg");
+}
+.portal > a:last-child{
+    background-image: url("images/light.jpg");
+
+}
+.vl {
+    border-left: 2px solid lightgray;
+    height: calc(100vh - 160px);
+    margin-top: 20px;
+}
+.contactpage{
+    display: grid;
+    grid-template-columns: 1fr 3px 1fr;
+    height: 100%;
+}
+.contactblok{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.contactblok form > input[type=sumbit]{
+    color: white;
+    width: 100px;
+}
+
+input[type=text], input[type=password] {
+    width: 30vw;
+    margin: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+div
+
+textarea{
+    width: 30vw;
+    margin-top: 10px;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

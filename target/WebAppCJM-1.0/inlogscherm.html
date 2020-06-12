@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>CJM-support</title>
     <link rel="stylesheet" href="Styles/styles.css">
-    <link rel="stylesheet" href="Styles/frontpagestyle.css">
+    <link rel="stylesheet" href="Styles/inlogschermstyle.css">
 </head>
 <body>
 <header>
@@ -17,15 +17,16 @@
         <a href="contact.html">Contact</a>
         <a href="inlogscherm.html">Inloggen</a>
     </nav>
-
 </header>
+<div id="inlogblok">
+    <form id="inlogform">
+        <label for="name"></label>
+        <input type="text" name="username" id="name" placeholder="Voer uw gebruikersnaam in."/>
 
-<main>
-    <div class="catchphrase">Kies een branche en ontdek wat CJM voor u te bieden heeft!</div>
-    <div class="portal">
-        <a href="elektra.html">Elektra</a>
-        <a href="lichtengeluid.html">Licht en geluid</a>
-    </div>
-</main>
+        <label for="password"></label>
+        <input type="password" name="password" id="password" placeholder="Voer uw wachtwoord in."/>
+        <input type="submit" value="Login!" name="login">
+    </form>
+</div>
 </body>
 </html>
