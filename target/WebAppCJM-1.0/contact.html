@@ -24,7 +24,7 @@
         <div class="contactblok">
             <h1>Contactblok:</h1>
             <form id="contactenblokform">
-                <input type="text" id="name" name="name" placeholder="Uw voor en achternaam.">
+                <input type="text" id="fname" name="fname" placeholder="Uw voor en achternaam.">
                 <input type="email" id="fmail" name="fmail" placeholder="Uw Email-adres">
                 <input minlength="10" maxlength="12" type="tel" id="fnummer" name="fnummer"
                        placeholder="Uw telefoonnummer">
@@ -38,10 +38,10 @@
         <div class="reviewblok">
             <h1>Reviewblok:</h1>
             <form id="reviewblokform">
-                <input type="text" id="name1" name="name" placeholder="Uw voor en achternaam.">
+                <input type="text" id="name1" name="fname1" placeholder="Uw voor en achternaam."/>
                 <input type="text" id="fmail1" name="fmail1" placeholder="Uw Email-adres">
                 <input type="text" id="fnummer1" name="fnummer1" placeholder="Uw telefoonnummer">
-                <input type="number" id="frating" min="1" max="5" placeholder="Aantal sterren">
+                <input type="number" id="frating" name="frating1" min="1" max="5" placeholder="Aantal sterren">
                 <textarea id="fnote1" name="fnote1" placeholder="Overige mening (max 140 characters)" rows="4"
                           cols="50" maxlength="140"></textarea>
                 <input id="submitReview" type="submit" value="Versturen">
@@ -49,6 +49,7 @@
         </div>
     </div>
 </main>
-<script type="text/javascript" src="JavaScript/contactverzoekscript.js"></script>
+<script type="text/javascript" src="JavaScript/contactpage/contactverzoekscript.js"></script>
+<script type="text/javascript" src="JavaScript/contactpage/reviewBlok.js"></script>
 </body>
 </html>

@@ -1,35 +1,44 @@
 package nl.cjm.webapp.model;
 
 import java.util.Date;
+import java.util.Objects;
 
-public class Review extends GastBlok{
+public class Review extends GastBlok {
     private int aantalSterren;
-    private boolean geaccepteerd;
+    private String onderbouwing;
 
-    public Review(String nm, String em, int tel, String tt, String bs, Date dt, int aS, boolean acc) {
-        super(nm, em, tel, tt, bs, dt);
+    public Review(String nm, String em, int tel, String onderbouwing, String dt, int aS) {
+        super(nm, em, tel, dt);
         this.aantalSterren = aS;
-        this.geaccepteerd = acc;
-    }
-    public Review(String nm, String em, String tt, String bs, Date dt, int aS, boolean acc) {
-        super(nm, em, tt, bs, dt);
-        this.aantalSterren = aS;
-        this.geaccepteerd = acc;
+        this.onderbouwing = onderbouwing;
     }
 
     public int getAantalSterren() {
         return aantalSterren;
     }
 
-    public void setAantalSterren(int aantalSterren) {
-        this.aantalSterren = aantalSterren;
+    public String getOnderbouwing() {
+        return onderbouwing;
     }
 
-    public boolean isGeaccepteerd() {
-        return geaccepteerd;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Review)) return false;
+        Review review = (Review) o;
+        return aantalSterren == review.aantalSterren &&
+                Objects.equals(onderbouwing, review.onderbouwing);
     }
 
-    public void setGeaccepteerd(boolean geaccepteerd) {
-        this.geaccepteerd = geaccepteerd;
+    @Override
+    public String toString() {
+        return "Review{" +
+                "aantalSterren=" + aantalSterren +
+                ", onderbouwing='" + onderbouwing + '\'' +
+                ", naam='" + naam + '\'' +
+                ", email='" + email + '\'' +
+                ", telefoon=" + telefoon +
+                ", datum='" + datum + '\'' +
+                '}';
     }
 }

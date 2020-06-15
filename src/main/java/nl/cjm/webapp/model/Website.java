@@ -8,7 +8,7 @@ public class Website implements Serializable {
     private ArrayList<Fotoslider> fotosliders = new ArrayList<>();
     private ArrayList<Review> pendingReviews = new ArrayList<>();
     private ArrayList<Review> geaccepteerdeReviews = new ArrayList<>();
-    private ArrayList<GastBlok> contactVerzoeken = new ArrayList<>();
+    private ArrayList<Contactblok> contactVerzoeken = new ArrayList<>();
 
     private static Website website = new Website();
 
@@ -33,8 +33,8 @@ public class Website implements Serializable {
         return pendingReviews;
     }
 
-    public void setPendingReviewsReviews(ArrayList<Review> pendingReviews) {
-        this.pendingReviews = pendingReviews;
+    public void addPendingReview(Review pendingReview) {
+        pendingReviews.add(pendingReview);
     }
 
     public ArrayList<Review> getGeaccepteerdeReviews() {
@@ -45,15 +45,15 @@ public class Website implements Serializable {
         this.geaccepteerdeReviews = geaccepteerdeReviews;
     }
 
-    public ArrayList<GastBlok> getContactVerzoeken() {
+    public ArrayList<Contactblok> getContactVerzoeken() {
         return contactVerzoeken;
     }
 
-    public void setContactVerzoeken(ArrayList<GastBlok> contactVerzoeken) {
+    public void setContactVerzoeken(ArrayList<Contactblok> contactVerzoeken) {
         this.contactVerzoeken = contactVerzoeken;
     }
 
-    public void addContactverzoek(GastBlok gastblok) {
+    public void addContactverzoek(Contactblok gastblok) {
         contactVerzoeken.add(gastblok);
     }
 
