@@ -1,8 +1,6 @@
-package nl.cjm.webapp.model;
+package nl.cjm.model;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
-import java.nio.file.Path;
 import java.util.ArrayList;
 
 public class Fotoslider implements Serializable {

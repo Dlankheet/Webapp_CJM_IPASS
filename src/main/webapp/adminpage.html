@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>CJM-support</title>
     <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/adminpagestyle.css">
 </head>
 <body>
 <header>
@@ -14,11 +15,39 @@
         <a href="overons.html">Over ons</a>
         <a href="diensten.html">Diensten</a>
         <a href="contact.html">Contact</a>
-        <a href="inlogscherm.html">Inloggen</a>
+        <a id="inlog-button" href="inlogscherm.html">Inloggen</a>
     </nav>
-    <div class="contactblok">
-
-    </div>
 </header>
+<main>
+    <div class="contact-blok">
+        <h1>Contactverzoeken</h1>
+        <template id="single-contactverzoek-template">
+            <article class="single-contactverzoek">
+                <div class="contactverzoek-content">
+                    <h1 class="verzoek-title">Testtitel</h1>
+                    <time class="verzoek-date">dinsdag, 16 juni 2020</time>
+                    <p class="verzoek-klantnaam"><b>Klantnaam:</b> Lorem Ipsum</p>
+                    <p class="verzoek-beschrijving"><b>Beschrijving:</b> <br> Far far away, behind the word mountains,
+                        far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live
+                        in.</p>
+                    <p class="verzoek-klantmail"><b>E-mail:</b> lorem@ipsum.nl</p>
+                    <p class="verzoek-klantnummer"><b>Telefoon:</b> 0624802126</p>
+                    <button class="contactverzoek-remove-button">Verwijder Verzoek</button>
+                </div>
+            </article>
+        </template>
+    </div>
+    <div class="review-blok">
+        <p>Hierin komen de reviews</p>
+    </div>
+    <div class="fotoslide-elektra-blok">
+        <p>Hierin komt bestanden toevoegen van fotoslide1</p>
+    </div>
+    <div class="fotoslide-lightandsound-blok">
+        <p>Hierin komt bestanden toevoegen van fotoslide2</p>
+    </div>
+</main>
+<script src="JavaScript/adminpage/getcontactverzoekscript.js"></script>
+<script src="JavaScript/security/uitlogscript.js"></script>
 </body>
 </html>

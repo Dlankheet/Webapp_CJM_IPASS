@@ -1,7 +1,6 @@
-package nl.cjm.webapp.model;
+package nl.cjm.model;
 
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Website implements Serializable {
@@ -56,5 +55,7 @@ public class Website implements Serializable {
     public void addContactverzoek(Contactblok gastblok) {
         contactVerzoeken.add(gastblok);
     }
-
+    public void removeContactverzoek(Contactblok contact){
+        contactVerzoeken.remove(contact);
+    }
 }

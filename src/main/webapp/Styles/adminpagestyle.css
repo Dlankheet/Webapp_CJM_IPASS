@@ -1,0 +1,33 @@
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+main > div{
+    min-height: 50vh;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    border-style: solid;
+    border-color: gray;
+    border-width: 1px;
+    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.contactverzoek-content > .verzoek-date{
+    color: gray;
+}
+.contact-blok > article{
+    margin-bottom: 10px;
+}
+.review-blok{
+
+}
+
+.fotoslide-elektra-blok{
+
+}
+
+.fotoslide-lightandsound-blok{
+
+}

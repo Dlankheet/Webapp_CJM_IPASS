@@ -1,4 +1,4 @@
-package nl.cjm.webapp.model;
+package nl.cjm.model;
 
 import java.io.Serializable;
 import java.nio.file.Path;

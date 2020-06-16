@@ -15,18 +15,19 @@
         <a href="overons.html">Over ons</a>
         <a href="diensten.html">Diensten</a>
         <a href="contact.html">Contact</a>
-        <a href="inlogscherm.html">Inloggen</a>
+        <a id="inlog-button" href="inlogscherm.html">Inloggen</a>
     </nav>
 </header>
 <div id="inlogblok">
     <form id="inlogform">
         <label for="name"></label>
         <input type="text" name="username" id="name" placeholder="Voer uw gebruikersnaam in."/>
-
         <label for="password"></label>
         <input type="password" name="password" id="password" placeholder="Voer uw wachtwoord in."/>
-        <input type="submit" value="Login!" name="login">
+        <input type="submit" value="Login!" name="login" id="login-button">
     </form>
 </div>
+<script src="JavaScript/security/inlogscript.js"></script>
+
 </body>
 </html>

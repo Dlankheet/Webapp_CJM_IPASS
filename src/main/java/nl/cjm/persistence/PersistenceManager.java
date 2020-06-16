@@ -1,9 +1,9 @@
-package nl.cjm.webapp.persistence;
+package nl.cjm.persistence;
 
 import com.azure.storage.blob.BlobClient;
 import com.azure.storage.blob.BlobContainerClient;
 import com.azure.storage.blob.BlobContainerClientBuilder;
-import nl.cjm.webapp.model.Website;
+import nl.cjm.model.Website;
 
 import java.io.*;
 

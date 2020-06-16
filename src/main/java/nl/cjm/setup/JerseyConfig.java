@@ -9,7 +9,6 @@ import javax.ws.rs.ApplicationPath;
 public class JerseyConfig extends ResourceConfig {
     public JerseyConfig() {
         packages("nl.cjm.webservices, nl.cjm.security");
-        //register(RolesAllowedDynamicFeature.class);
-        //@TODO koppel hier met je web-resource packages
+        register(RolesAllowedDynamicFeature.class);
     }
 }

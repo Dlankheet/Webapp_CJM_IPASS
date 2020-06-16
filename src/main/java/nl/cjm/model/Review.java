@@ -1,6 +1,5 @@
-package nl.cjm.webapp.model;
+package nl.cjm.model;
 
-import java.util.Date;
 import java.util.Objects;
 
 public class Review extends GastBlok {

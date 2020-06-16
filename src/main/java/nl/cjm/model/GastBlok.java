@@ -1,7 +1,6 @@
-package nl.cjm.webapp.model;
+package nl.cjm.model;
 
 import java.io.Serializable;
-import java.util.Date;
 
 public abstract class GastBlok implements Serializable {
     protected String naam;

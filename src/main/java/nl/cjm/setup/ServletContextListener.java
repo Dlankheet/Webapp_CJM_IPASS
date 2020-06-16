@@ -1,8 +1,7 @@
 package nl.cjm.setup;
-// Voor deze iteratie(2) zal de data alleen opgeslagen worden op het moment dat deze afsluit en ingeladen als de server start.
-// Dit zal bij verdere iteraties uitgewerkt worden;
 
-import nl.cjm.webapp.persistence.*;
+import nl.cjm.model.MyUser;
+import nl.cjm.persistence.PersistenceManager;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.annotation.WebListener;
 import java.io.IOException;
@@ -12,6 +11,7 @@ public class ServletContextListener implements javax.servlet.ServletContextListe
 
     @Override
     public void contextInitialized(ServletContextEvent sce){
+        new MyUser("Daniel", "iets12");
         try {
             PersistenceManager.loadWebsiteFromAzure();
         } catch (IOException | ClassNotFoundException e) {

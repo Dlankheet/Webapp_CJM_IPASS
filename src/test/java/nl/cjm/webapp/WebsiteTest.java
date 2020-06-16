@@ -1,6 +1,6 @@
 //package nl.cjm.webapp;
 //
-//import nl.cjm.webapp.model.*;
+//import nl.cjm.model.*;
 //
 //import org.junit.jupiter.api.Test;
 //

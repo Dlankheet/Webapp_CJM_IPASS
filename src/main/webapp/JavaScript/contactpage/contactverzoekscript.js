@@ -10,6 +10,7 @@ function contactverzoekMaken(event){
             .then(function (response) {
                 if (response.ok) {
                     alert("Contactverzoek is verzonden!")
+                    document.querySelector("#contactenblokform").reset();
                     return response.json();
                 }else{
                     alert("Voer geldige informatie in.")

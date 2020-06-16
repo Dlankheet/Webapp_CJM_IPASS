@@ -1,9 +1,9 @@
 package nl.cjm.webservices;
 
-import nl.cjm.webapp.model.GastBlok;
-import nl.cjm.webapp.model.Review;
-import nl.cjm.webapp.model.Website;
-import nl.cjm.webapp.persistence.PersistenceManager;
+import nl.cjm.model.GastBlok;
+import nl.cjm.model.Review;
+import nl.cjm.model.Website;
+import nl.cjm.persistence.PersistenceManager;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
