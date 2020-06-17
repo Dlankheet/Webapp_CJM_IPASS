@@ -59,4 +59,5 @@ public class Website implements Serializable {
     public void removeContactverzoek(Contactblok contact){
         contactVerzoeken.remove(contact);
     }
+    public void removeReview(Review review){pendingReviews.remove(review);}
 }

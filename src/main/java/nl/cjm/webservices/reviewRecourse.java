@@ -1,13 +1,17 @@
 package nl.cjm.webservices;
 
+import nl.cjm.model.Contactblok;
 import nl.cjm.model.GastBlok;
 import nl.cjm.model.Review;
 import nl.cjm.model.Website;
 import nl.cjm.persistence.PersistenceManager;
 
+import javax.annotation.security.RolesAllowed;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.SecurityContext;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -55,5 +59,26 @@ public class reviewRecourse {
                 return Response.ok(review).build();
             }
     }}
+    @DELETE
+    @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed("administrator")
+    @Path("{datum}")
+    public Response deleteReview(@Context SecurityContext securityContext, @PathParam("datum") String datum) {
+        for (Review review : website.getPendingReviews()) {
+            String date = review.getDatum();
+            date = date.replaceAll(" ", "_");
+            System.out.println(date);
+            System.out.println(datum);
+            if (date.equals(datum)) {
+                try {
+                    website.removeReview(review);
+                    return Response.ok().build();
+                } catch (Exception e) {
+                    return Response.status(Response.Status.NOT_FOUND).build();
+                }
+            }
+        }
+        return Response.status(Response.Status.NOT_FOUND).build();
+    }
 }
 

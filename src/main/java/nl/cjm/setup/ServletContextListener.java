@@ -21,9 +21,6 @@ public class ServletContextListener implements javax.servlet.ServletContextListe
             System.out.println("Binnenhalen niet gelukt");
             e.printStackTrace();
         }
-        Website website = Website.getWebsite();
-        website.addContactverzoek(new Contactblok("Extra", "test.test@test.nl", 612345678, "Testverzoek", "Ik wil een contact", "12-07-2000"));
-        website.addContactverzoek(new Contactblok("Extra2", "test.test@test.nl", 612345678, "Testverzoek2", "Ik wil een contact2", "12-07-2010"));
     }
     @Override
     public void contextDestroyed(ServletContextEvent sce) {

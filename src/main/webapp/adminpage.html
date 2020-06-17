@@ -6,10 +6,11 @@
     <title>CJM-support</title>
     <link rel="stylesheet" href="Styles/styles.css">
     <link rel="stylesheet" href="Styles/adminpagestyle.css">
+    <link rel="icon" href="/images/favicon.png">
     <script>
-        if(window.sessionStorage.getItem("myJWT") === null){
-        location.replace("/index.html");
-    }</script>
+        if (window.sessionStorage.getItem("myJWT") === null) {
+            location.replace("/index.html");
+        }</script>
 </head>
 <body>
 <header>
@@ -44,7 +45,23 @@
         </template>
     </div>
     <div class="review-blok">
-        <p>Hierin komen de reviews</p>
+        <h1>Wachtende reviews</h1>
+        <template id="single-review-template">
+            <article class="single-review">
+                <div class="review-content">
+                    <h1 class="verzoek-title">Testtitel</h1>
+                    <time class="verzoek-date">dinsdag, 16 juni 2020</time>
+                    <p class="verzoek-klantnaam"><b>Klantnaam:</b> Lorem Ipsum</p>
+                    <p class="verzoek-beschrijving"><b>Beschrijving:</b> <br> Far far away, behind the word mountains,
+                        far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live
+                        in.</p>
+                    <p class="verzoek-klantmail"><b>E-mail:</b> lorem@ipsum.nl</p>
+                    <p class="verzoek-klantnummer"><b>Telefoon:</b> 0624802126</p>
+                    <button class="review-remove-button">Verwijder Review</button>
+                    <button class="review-toevoegen-button">Voeg review toe aan pagina</button>
+                </div>
+            </article>
+        </template>
     </div>
     <div class="fotoslide-elektra-blok">
         <p>Hierin komt bestanden toevoegen van fotoslide1</p>
@@ -54,6 +71,7 @@
     </div>
 </main>
 <script src="JavaScript/adminpage/getcontactverzoekscript.js"></script>
+<script src="JavaScript/adminpage/getReviewscript.js"></script>
 <script src="JavaScript/security/adminscript.js"></script>
 <script src="JavaScript/security/uitlogscript.js"></script>
 </body>
