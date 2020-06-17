@@ -1,11 +1,7 @@
-const loginbutton = document.getElementById("inlog-button")
-const header = document.getElementsByName("header")
+const logout_button = document.getElementById("logout-button")
 
-if(sessionStorage.getItem("myJWT") !== null){
-    loginbutton.textContent= "Uitloggen";
-    loginbutton.addEventListener('click',function () {
-        window.sessionStorage.clear();
-        window.location.replace("index.html");
-        window.alert("uitgelogd");
-    })
-}
+logout_button.addEventListener('click',function () {
+    location.replace("/index.html");
+    window.sessionStorage.clear();
+    window.alert("uitgelogd");
+})

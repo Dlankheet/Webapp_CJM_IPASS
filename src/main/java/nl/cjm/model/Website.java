@@ -55,6 +55,7 @@ public class Website implements Serializable {
     public void addContactverzoek(Contactblok gastblok) {
         contactVerzoeken.add(gastblok);
     }
+
     public void removeContactverzoek(Contactblok contact){
         contactVerzoeken.remove(contact);
     }

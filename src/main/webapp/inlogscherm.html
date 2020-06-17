@@ -9,7 +9,7 @@
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="images/logo_without_text.png" width="320" height="116"></a>
+    <a href="index.html"><img src="images/logo_without_text.png" width="320" height="116" alt="Logo CJM"></a>
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="overons.html">Over ons</a>
@@ -20,11 +20,9 @@
 </header>
 <div id="inlogblok">
     <form id="inlogform">
-        <label for="name"></label>
-        <input type="text" name="username" id="name" placeholder="Voer uw gebruikersnaam in."/>
-        <label for="password"></label>
-        <input type="password" name="password" id="password" placeholder="Voer uw wachtwoord in."/>
-        <input type="submit" value="Login!" name="login" id="login-button">
+        <input aria-labelledby="name" type="text" name="username" id="name" placeholder="Voer uw gebruikersnaam in."/>
+        <input aria-labelledby="password" type="password" name="password" id="password" placeholder="Voer uw wachtwoord in."/>
+        <input type="button" value="Login!" name="login" id="login-button">
     </form>
 </div>
 <script src="JavaScript/security/inlogscript.js"></script>

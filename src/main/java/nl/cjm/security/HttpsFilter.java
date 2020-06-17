@@ -1,4 +1,4 @@
-package nl.cjm.security; //@TODO let op de package definitie
+package nl.cjm.security;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;

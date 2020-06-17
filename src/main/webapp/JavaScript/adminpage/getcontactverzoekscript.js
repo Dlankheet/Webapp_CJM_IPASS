@@ -1,4 +1,7 @@
-function removeVerzoek(datum) {
+
+
+function removeVerzoek(datum, event) {
+    event.preventDefault();
     fetch('/restservices/contactaanvragen/' + stringWithoutSpaces(datum), {
         method: "DELETE",
         headers: {"Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")}
@@ -18,12 +21,10 @@ function stringWithoutSpaces(text) {
 
 function addSingleContactverzoek(naam, mail, nummer, titel, beschrijving, datum) {
     // cloning the template
-    //debugger;
     const single_contactverzoek_clone = document.importNode(document.getElementById("single-contactverzoek-template").content, true);
     const datum_zonder_spatie = stringWithoutSpaces(datum); // The ID attribute of an HTML element isn't supposed to contain white spaces.
 
-    // applying the data
-    //debugger;
+    // applying the data-
     const contactverzoek_article = single_contactverzoek_clone.querySelector('.single-contactverzoek');
     contactverzoek_article.setAttribute('id', datum_zonder_spatie);
 
@@ -45,7 +46,7 @@ function addSingleContactverzoek(naam, mail, nummer, titel, beschrijving, datum)
     const contactverzoek_klantnummer = single_contactverzoek_clone.querySelector('.verzoek-klantnummer');
     contactverzoek_klantnummer.innerHTML = "<b>Telefoon:</b>" + nummer;
 
-    single_contactverzoek_clone.querySelector('.contactverzoek-remove-button').addEventListener('click', event => removeVerzoek(datum));
+    single_contactverzoek_clone.querySelector('.contactverzoek-remove-button').addEventListener('click', event => removeVerzoek(datum, event));
 
     //Maak fragment en voeg het toe aan de website
     const verzoekFragment = document.createDocumentFragment();
@@ -53,7 +54,6 @@ function addSingleContactverzoek(naam, mail, nummer, titel, beschrijving, datum)
 
     const alleVerzoeken = document.querySelector('.contact-blok');
     alleVerzoeken.append(verzoekFragment);
-    //debugger;
 }
 
 function initContactverzoeken() {
@@ -66,20 +66,18 @@ function initContactverzoeken() {
         })
         .then(response => {
             response.forEach(item => {
-                //debugger;
                 const naam = item.naam
                 const mail = item.email
                 const nummer = item.telefoon
                 const title = item.titel
                 const beschrijving = item.beschrijving
                 const datum = item.datum
-                //debugger;
                 addSingleContactverzoek(naam, mail, nummer, title, beschrijving, datum)
             })
         })
         .catch(error => {
+            location.replace("/index.html")
             alert("Error getting news" + error)
-            window.replace.location("index.html")
         });
 }
 

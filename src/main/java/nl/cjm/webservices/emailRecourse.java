@@ -1,4 +1,5 @@
 //package nl.cjm.webservices;
+//import java.util.Map;
 //import java.util.Properties;
 //import javax.jms.Message;
 //import javax.mail.*;
@@ -13,8 +14,8 @@
 //
 //    //Get the session object
 //    Properties props = new Properties();
-//   props.put("mail.smtp.host", host);
-//   props.put("mail.smtp.auth", "true");
+//    props.Entry<"mail.smtp.host", host>;
+//    props.put("mail.smtp.auth", "true");
 //
 //    Session session = Session.getDefaultInstance(props,
 //            new javax.mail.Authenticator() {

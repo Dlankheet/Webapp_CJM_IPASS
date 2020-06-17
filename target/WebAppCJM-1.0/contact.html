@@ -8,7 +8,7 @@
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="images/logo_without_text.png" width="320" height="116"></a>
+    <a href="index.html"><img src="images/logo_without_text.png" width="320" height="116" alt="Logo CJM"></a>
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="overons.html">Over ons</a>
@@ -24,13 +24,13 @@
         <div class="contactblok">
             <h1>Contactblok:</h1>
             <form id="contactenblokform">
-                <input type="text" id="fname" name="fname" placeholder="Uw voor en achternaam.">
-                <input type="email" id="fmail" name="fmail" placeholder="Uw Email-adres">
-                <input minlength="10" maxlength="12" type="tel" id="fnummer" name="fnummer"
-                       placeholder="Uw telefoonnummer">
-                <input type="text" id="ftitle" name="ftitle" placeholder="Reden voor contact">
-                <textarea id="fnote" name="fnote" placeholder="Overige informatie (max 140 characters)" rows="4"
-                          cols="50" maxlength="140"></textarea>
+                <input aria-labelledby="fname" type="text" id="fname" name="fname" placeholder="Uw voor en achternaam." required>
+                <input aria-labelledby="fmail" type="email" id="fmail" name="fmail" placeholder="Uw Email-adres" required>
+                <input aria-labelledby="fnummer" minlength="10" maxlength="12" type="tel" id="fnummer" name="fnummer"
+                                                    placeholder="Uw telefoonnummer" required>
+                <input aria-labelledby="ftitle" type="text" id="ftitle" name="ftitle" placeholder="Reden voor contact" required>
+                <textarea aria-labelledby="fnote" id="fnote" name="fnote" placeholder="Overige informatie (max 140 characters)" rows="4"
+                                                     cols="50" maxlength="140"></textarea>
                 <input id="submitContact" type="submit" value="Versturen">
             </form>
         </div>
@@ -38,12 +38,12 @@
         <div class="reviewblok">
             <h1>Reviewblok:</h1>
             <form id="reviewblokform">
-                <input type="text" id="name1" name="fname1" placeholder="Uw voor en achternaam."/>
-                <input type="text" id="fmail1" name="fmail1" placeholder="Uw Email-adres">
-                <input type="text" id="fnummer1" name="fnummer1" placeholder="Uw telefoonnummer">
-                <input type="number" id="frating" name="frating1" min="1" max="5" placeholder="Aantal sterren">
-                <textarea id="fnote1" name="fnote1" placeholder="Overige mening (max 140 characters)" rows="4"
-                          cols="50" maxlength="140"></textarea>
+                <input aria-labelledby="name1" type="text" id="name1" name="fname1" placeholder="Uw voor en achternaam."/>
+                <input aria-labelledby="fmail1" type="email" id="fmail1" name="fmail1" placeholder="Uw Email-adres">
+                <input aria-labelledby="fnummer1" type="tel" id="fnummer1" name="fnummer1" placeholder="Uw telefoonnummer">
+                <input aria-labelledby="frating" type="number" id="frating" name="frating1" min="1" max="5" placeholder="Aantal sterren">
+                <textarea aria-labelledby="fnote1" id="fnote1" name="fnote1" placeholder="Overige mening (max 140 characters)" rows="4"
+                                                      cols="50" maxlength="140"></textarea>
                 <input id="submitReview" type="submit" value="Versturen">
             </form>
         </div>
@@ -51,6 +51,6 @@
 </main>
 <script type="text/javascript" src="JavaScript/contactpage/contactverzoekscript.js"></script>
 <script type="text/javascript" src="JavaScript/contactpage/reviewBlok.js"></script>
-<script src="JavaScript/security/uitlogscript.js"></script>
+<script src="JavaScript/security/adminscript.js"></script>
 </body>
 </html>

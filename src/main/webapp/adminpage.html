@@ -6,10 +6,14 @@
     <title>CJM-support</title>
     <link rel="stylesheet" href="Styles/styles.css">
     <link rel="stylesheet" href="Styles/adminpagestyle.css">
+    <script>
+        if(window.sessionStorage.getItem("myJWT") === null){
+        location.replace("/index.html");
+    }</script>
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="images/logo_without_text.png" width="320" height="116"></a>
+    <a href="index.html"><img src="images/logo_without_text.png" width="320" height="116" alt="Logo CJM"></a>
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="overons.html">Over ons</a>
@@ -17,6 +21,8 @@
         <a href="contact.html">Contact</a>
         <a id="inlog-button" href="inlogscherm.html">Inloggen</a>
     </nav>
+    <h1>Welkom op de administratorpagina!</h1>
+    <a id="logout-button" href="inlogscherm.html">Uitloggen</a>
 </header>
 <main>
     <div class="contact-blok">
@@ -48,6 +54,7 @@
     </div>
 </main>
 <script src="JavaScript/adminpage/getcontactverzoekscript.js"></script>
+<script src="JavaScript/security/adminscript.js"></script>
 <script src="JavaScript/security/uitlogscript.js"></script>
 </body>
 </html>
