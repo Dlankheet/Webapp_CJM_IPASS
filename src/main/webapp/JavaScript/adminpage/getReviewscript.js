@@ -13,7 +13,16 @@ function removeReview(datum, event) {
 }
 function toevoegenReview(datum, event){
     event.preventDefault();
-    alert("Deze functie werkt nog niet. Geduld AUB.")
+    fetch('/restservices/acceptedReviews/' + stringWithoutSpaces(datum), {
+        method: "PUT",
+        headers: {"Authorization": "Bearer " + window.sessionStorage.getItem("myJWT")}
+    })
+        .then(response => {
+            return response.json();
+        }).then(
+        location.reload())
+        .catch(error => { console.log(error)
+        });
 }
 
 function stringWithoutSpaces(text) {

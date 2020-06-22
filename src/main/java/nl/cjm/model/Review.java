@@ -15,6 +15,10 @@ public class Review extends GastBlok {
     public int getAantalSterren() {
         return aantalSterren;
     }
+    public void setPrivateinfoNull(){
+        this.email = null;
+        this.telefoon = Integer.parseInt(null);
+    }
 
     public String getOnderbouwing() {
         return onderbouwing;

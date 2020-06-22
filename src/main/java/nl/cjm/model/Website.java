@@ -40,10 +40,6 @@ public class Website implements Serializable {
         return geaccepteerdeReviews;
     }
 
-    public void setGeaccepteerdeReviews(ArrayList<Review> geaccepteerdeReviews) {
-        this.geaccepteerdeReviews = geaccepteerdeReviews;
-    }
-
     public ArrayList<Contactblok> getContactVerzoeken() {
         return contactVerzoeken;
     }
@@ -56,8 +52,18 @@ public class Website implements Serializable {
         contactVerzoeken.add(gastblok);
     }
 
-    public void removeContactverzoek(Contactblok contact){
+    public void removeContactverzoek(Contactblok contact) {
         contactVerzoeken.remove(contact);
     }
-    public void removeReview(Review review){pendingReviews.remove(review);}
+
+    public void removeReview(Review review) {
+        pendingReviews.remove(review);
+    }
+
+    public void acceptReview(Review review) {
+        pendingReviews.remove(review);
+        review.setPrivateinfoNull();
+        geaccepteerdeReviews.add(review);
+        System.out.println("reviewwueeueii"+geaccepteerdeReviews);
+    }
 }
