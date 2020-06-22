@@ -10,7 +10,7 @@
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="images/logo_without_text.png" width="320" height="116" alt="Logo CJM"></a>
+    <a class="logo" href="index.html"><img src="images/logo_without_text.png" alt="Logo CJM"></a>
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="overons.html">Over ons</a>
@@ -19,20 +19,125 @@
         <a id="inlog-button" href="inlogscherm.html">Inloggen</a>
     </nav>
 </header>
-<div class="slideshow">
-    <div class="slide">
-        <img src="images/fotoslider/test1%20(1).jpg" alt="fotoslide">
-        <img src="images/fotoslider/test1%20(2).jpg" alt="fotoslide">
-        <img src="images/fotoslider/test1%20(3).jpg" alt="fotoslide">
-        <img src="images/fotoslider/test1%20(4).jpg" alt="fotoslide">
-        <img src="images/fotoslider/test1%20(5).jpg" alt="fotoslide">
-        <img src="images/fotoslider/test1%20(6).jpg" alt="fotoslide">
-        <img src="images/fotoslider/test1%20(7).jpg" alt="fotoslide">
-    </div>
-</div>
-<button id="prevBtn">Prev</button>
-<button id="nextBtn">Next</button>
+<main>
+    <section>
+        <div class="slider">
+            <div class="slide current"
+                 style="background: url('https://www.giesen-installatie.nl/wp-content/uploads/2018/09/elektro.jpg') no-repeat center top/cover;">
+                <div class="content">
+                    <h1>Elektrotechniek</h1>
+                    <p>
+                        De kracht van CJM is het maken van elektronische schakels voor bijvoorbeeld supermarkten en
+                        huizen.
+                    </p>
+                </div>
+            </div>
+            <div class="slide"
+                 style="background: url('https://www.keuringsdienstvoorwonen.nl/media/2017/06/groepenkast.jpg') no-repeat center top/cover;">
+                <div class="content">
+                    <h1>Meterkasten</h1>
+                    <p> Een goede verdeling in uw meterkast is het begin van een goed stroomnetwerk.</p>
+                </div>
+            </div>
+            <div class="slide"
+                 style="background: url('https://www.consumentenbond.nl/binaries/content/gallery/cbhippowebsite/tests/beveiligingscamera/afbeeldingen/beveiligingscameras.jpg') no-repeat center top/cover;">
+                <div class="content">
+                    <h1>Beveiligingscamera's</h1>
+                    <p>
+                        Bij last van vervelende mensjes voor je voordeur, komt CJM hele mooie beveiligings camera's en
+                        recorders installeren.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <template id="newSlide">
+            <div class="renametoslide"
+                 style="background: url('https://source.unsplash.com/yXpA_eCbtzI/1600x900') no-repeat center top/cover;">
+                <div class="renametocontent">
+                    <h1>Slide Four</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
+                        maxime, voluptatibus labore doloremque vero!
+                    </p>
+                </div>
+            </div>
+        </template>
+
+        <div class="buttons">
+            <button id="prev">&#x2039;</button>
+            <button id="next">&#x203A;</button>
+            <button id="infoButton">Klik hier voor meer informatie!</button>
+        </div>
+    </section>
+    <section>
+        <div id="extrainfo">
+            <h1>CJM en elektrotechniek!</h1>
+            <p>meer toenadering. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit nec libero quis
+                venenatis. Nulla facilisi. Pellentesque ex mauris, sollicitudin in orci vitae, faucibus lacinia orci.
+                Donec
+                at leo magna. Etiam vitae fermentum turpis, at facilisis lacus. Donec id turpis massa. Fusce non mi et
+                dui
+                vehicula iaculis fringilla eget erat. Etiam interdum lectus sit amet semper lobortis. Quisque vel mi
+                euismod, sodales orci vel, euismod mauris. Aliquam id erat ut mi ultrices fringilla nec id nulla. Donec
+                id
+                nulla sed mauris dignissim consequat in in erat. Proin congue pulvinar vehicula. Ut ut dolor vitae ipsum
+                pretium laoreet eget quis augue. Duis aliquet velit eu metus placerat suscipit.</p><br>
+
+            <p>Ut nunc odio, gravida vitae purus nec, iaculis posuere nunc. Vivamus ante risus, venenatis ac fringilla
+                ut,
+                condimentum vel elit. Aenean ullamcorper magna nec porta fermentum. Sed vitae auctor elit. Mauris et
+                odio
+                eleifend, tincidunt tortor in, sodales nisl. In consequat commodo quam, et volutpat ante pretium sed.
+                Class
+                aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In consectetur
+                arcu in
+                suscipit congue. Duis viverra eget nulla nec vulputate. Curabitur eget molestie elit. Fusce at risus
+                nisl.
+                Sed sodales fermentum laoreet.</p><br>
+
+            <p>Maecenas sit amet aliquam arcu. Fusce scelerisque, mi non lacinia facilisis, ligula nisi lacinia diam, id
+                porta lacus libero vitae augue. Nulla facilisi. Nunc tortor urna, tempor vitae nunc a, pharetra suscipit
+                magna. In ultricies, sem ac posuere ultricies, neque sapien laoreet quam, quis aliquam augue libero non
+                dui.
+                Pellentesque scelerisque venenatis velit at vestibulum. Integer eu fermentum est. Vestibulum ullamcorper
+                velit non nisl convallis, a dignissim mauris porttitor. Integer in mi scelerisque, mattis leo in,
+                gravida
+                enim.</p><br>
+
+            <p>Duis nec pretium leo. Pellentesque eleifend quam ligula, ut mollis massa commodo ut. Nunc rutrum velit
+                quis
+                quam lobortis, et ornare lacus commodo. Ut id mollis neque. Curabitur porttitor ipsum a elit rutrum
+                elementum. Pellentesque vel odio ac leo elementum semper. Morbi a felis orci. Vestibulum ante ipsum
+                primis
+                in faucibus orci luctus et ultrices posuere cubilia curae; Fusce et justo eu velit rutrum vehicula. Sed
+                malesuada tempor neque ut malesuada. Morbi eu neque ut nisl sagittis lacinia. Maecenas ut congue tellus,
+                vitae ultrices arcu. Proin feugiat ante ut iaculis egestas. Fusce ornare, tellus et viverra iaculis,
+                turpis
+                lectus accumsan velit, a bibendum erat dolor sit amet nisl. Nam quam ex, pulvinar sit amet nisi in,
+                consequat hendrerit est. Vestibulum imperdiet diam ut pulvinar mattis.</p><br>
+
+            <p>Morbi vitae lacus at orci ornare pellentesque non id urna. Donec gravida eleifend posuere. Ut varius
+                tortor
+                nec neque ullamcorper, vitae venenatis tellus molestie. Suspendisse imperdiet, lectus ut iaculis
+                scelerisque, lectus diam tincidunt purus, in pretium nisl nisl non nisl. Quisque ac lacus lorem. Nulla
+                pellentesque accumsan enim, venenatis hendrerit nisl sollicitudin at. Nunc scelerisque egestas nulla
+                vestibulum tristique. Donec posuere rutrum quam ut hendrerit. Integer fermentum et erat nec suscipit.
+                Vestibulum nec feugiat dui. Cras mollis tristique ultricies. Nullam tincidunt dapibus dui, sit amet
+                dignissim libero suscipit in. Nulla facilisi.</p><br>
+        </div>
+    </section>
+</main>
 <script src="JavaScript/branchepage/slider.js"></script>
 <script src="JavaScript/security/adminscript.js"></script>
 </body>
 </html>
+
+<!-- Copyright (c) 2020 by Brad Traversy (https://codepen.io/bradtraversy/pen/oVPBaa)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+-->
