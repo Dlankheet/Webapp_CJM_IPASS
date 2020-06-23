@@ -32,6 +32,7 @@ public class reviewGoedkeuren {
                     website.acceptReview(review);
                     return Response.ok().build();
                 } catch (Exception e) {
+                    System.out.println(e);
                     return Response.status(Response.Status.NOT_FOUND).build();
                 }
             }
@@ -43,7 +44,7 @@ public class reviewGoedkeuren {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getacceptedReviews(@Context SecurityContext securityContext) {
         ArrayList<Review> reviews = new ArrayList<>();
-        reviews.addAll(website.getPendingReviews());
+        reviews.addAll(website.getGeaccepteerdeReviews());
         return Response.ok(reviews).build();
     }
 }

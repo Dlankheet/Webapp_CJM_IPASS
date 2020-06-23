@@ -10,6 +10,7 @@
     <script>
         if (window.sessionStorage.getItem("myJWT") === null) {
             location.replace("/index.html");
+            sessionStorage.clear();
         }</script>
 </head>
 <body>
@@ -18,7 +19,6 @@
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="overons.html">Over ons</a>
-        <a href="diensten.html">Diensten</a>
         <a href="contact.html">Contact</a>
         <a id="inlog-button" href="inlogscherm.html">Inloggen</a>
     </nav>
@@ -63,14 +63,41 @@
             </article>
         </template>
     </div>
-    <div class="fotoslide-elektra-blok">
-        <p>Hierin komt bestanden toevoegen van fotoslide1</p>
+    <div class="fotoslide-add">
+        <h1>Invoegen foto's fotoslider.</h1>
+        <form id="fotoslide-add-form" class="adminform">
+            <label for="brancheSelector">Selecteer branche:</label>
+            <select id="brancheSelector" name="brancheSelector">
+                <option value="leg">Licht en Geluid</option>
+                <option value="elektra">Elektra</option>
+            </select>
+            <label for="titel">Titel:</label>
+            <input type="text" placeholder="Titel text" id="titel" name="titel">
+            <label for="beschrijving">Voeg een beschrijving toe:</label>
+            <textarea placeholder="Beschrijving text" id="beschrijving" name="beschrijving"></textarea>
+            <input type="file" accept="image/png,image/jpeg" name="afbeelding" id="fileupload">
+            <input type="submit" name="submitFoto"  id="submitFoto" value="Foto plaatsen">
+        </form>
     </div>
-    <div class="fotoslide-lightandsound-blok">
-        <p>Hierin komt bestanden toevoegen van fotoslide2</p>
+    <div class="delete-foto-block">
+        <form id="deleteSelector">
+        <label for="brancheSelector-delete">Selecteer branche:</label>
+        <select id="brancheSelector-delete" name="brancheSelector-delete">
+            <option value="leg">Licht en Geluid</option>
+            <option value="elektra">Elektra</option>
+        </select>
+            <input type="submit" name="laadFotos"  id="laadFotos" value="Laad fotos">
+        </form>
+        <template id="singleDeleteItem">
+        <div class="single-item">
+        <span id="titel-span">Titel van te verwijderen foto</span><button id="remove-item">Delete!</button>
+        </div>
+        </template>
     </div>
 </main>
 <script src="JavaScript/adminpage/getcontactverzoekscript.js"></script>
+<script src="JavaScript/adminpage/addAfbeelding.js"></script>
+<script src="JavaScript/adminpage/deleteAfbeelding.js"></script>
 <script src="JavaScript/adminpage/getReviewscript.js"></script>
 <script src="JavaScript/security/adminscript.js"></script>
 <script src="JavaScript/security/uitlogscript.js"></script>

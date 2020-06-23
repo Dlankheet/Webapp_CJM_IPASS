@@ -17,7 +17,7 @@ public class Review extends GastBlok {
     }
     public void setPrivateinfoNull(){
         this.email = null;
-        this.telefoon = Integer.parseInt(null);
+        this.telefoon = 0;
     }
 
     public String getOnderbouwing() {

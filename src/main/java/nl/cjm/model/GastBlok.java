@@ -30,5 +30,6 @@ public abstract class GastBlok implements Serializable {
     public String getDatum() {
         return datum;
     }
+// TODO: 23-6-2020 Schrijven equals voor 4 variabelen
 
 }

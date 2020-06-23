@@ -29,5 +29,15 @@ public class Contactblok extends GastBlok{
                 Objects.equals(beschrijving, that.beschrijving);
     }
 
-
+    @Override
+    public String toString() {
+        return "Contactblok{" +
+                "titel='" + titel + '\'' +
+                ", beschrijving='" + beschrijving + '\'' +
+                ", naam='" + naam + '\'' +
+                ", email='" + email + '\'' +
+                ", telefoon=" + telefoon +
+                ", datum='" + datum + '\'' +
+                '}';
+    }
 }

@@ -29,7 +29,7 @@ public class contactRecourse {
         return Response.ok(contactverzoeken).build();
     }
 
-    @POST
+    @POST //In resource checken maar ook in domein.
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response dienContactverzoekIn(@FormParam("fname") String naam,
@@ -49,6 +49,7 @@ public class contactRecourse {
                 website.addContactverzoek(contactverzoek);
                 try {
                     PersistenceManager.saveWebsiteToAzure();
+                    emailRecourse.sendContactMail(contactverzoek);
                 } catch (IOException e) {
                     System.out.println("Opslaan niet gelukt");
                     e.printStackTrace();

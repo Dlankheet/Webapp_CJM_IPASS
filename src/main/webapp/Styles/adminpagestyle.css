@@ -24,7 +24,12 @@ main > div{
 
 }
 
-.fotoslide-elektra-blok{
+.adminform{
+    display: flex;
+    flex-direction: row;
+}
+
+.adminform > *{
 
 }
 

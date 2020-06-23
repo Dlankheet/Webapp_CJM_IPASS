@@ -14,13 +14,12 @@
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="overons.html">Over ons</a>
-        <a href="diensten.html">Diensten</a>
         <a href="contact.html">Contact</a>
         <a id="inlog-button" href="inlogscherm.html">Inloggen</a>
     </nav>
 </header>
 <main>
-    <section>
+    <section id="fotos">
         <div class="slider">
             <div class="slide current"
                  style="background: url('https://www.giesen-installatie.nl/wp-content/uploads/2018/09/elektro.jpg') no-repeat center top/cover;">
@@ -51,11 +50,10 @@
             </div>
         </div>
         <template id="newSlide">
-            <div class="renametoslide"
-                 style="background: url('https://source.unsplash.com/yXpA_eCbtzI/1600x900') no-repeat center top/cover;">
-                <div class="renametocontent">
-                    <h1>Slide Four</h1>
-                    <p>
+            <div class="slide">
+                <div class="content">
+                    <h1 class="fotoTitel">Slide Four</h1>
+                    <p class="fotoBeschrijving">
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
                         maxime, voluptatibus labore doloremque vero!
                     </p>
@@ -127,7 +125,8 @@
         </div>
     </section>
 </main>
-<script src="JavaScript/branchepage/slider.js"></script>
+<script src="JavaScript/branchepage/getElektraFotoScript.js"></script>
+<script src="JavaScript/branchepage/sliderScript.js"></script>
 <script src="JavaScript/security/adminscript.js"></script>
 </body>
 </html>

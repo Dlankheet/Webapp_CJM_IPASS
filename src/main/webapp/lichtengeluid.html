@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>CJM-support</title>
     <link rel="stylesheet" href="Styles/styles.css">
+    <link rel="stylesheet" href="Styles/branchestyle.css">
     <link rel="icon" href="/images/favicon.png">
 </head>
 <body>
@@ -13,12 +14,114 @@
     <nav class="navbar">
         <a href="index.html">Home</a>
         <a href="overons.html">Over ons</a>
-        <a href="diensten.html">Diensten</a>
         <a href="contact.html">Contact</a>
         <a id="inlog-button" href="inlogscherm.html">Inloggen</a>
     </nav>
-
 </header>
+<main>
+    <section id="fotos">
+        <div class="slider">
+            <div class="slide current"
+                 style="background: url('https://www.s4u-events.nl/uploads/equipment/1/normal/original/19247801-680630182128555-2390552270409164027-n.jpg') no-repeat center top/cover;">
+                <div class="content">
+                    <h1>Licht</h1>
+                    <p>Lichtshows zitten in het bloed van CJM, in de discotheek geleerd te spelen met lichttafels
+                    en in de praktijk het maken van mooie lichtshows.</p>
+                </div>
+            </div>
+            <div class="slide"
+                 style="background: url('https://rfshows.nl/wp-content/uploads/2016/10/Wall-of-Sound-3.jpg') no-repeat center top/cover;">
+                <div class="content">
+                    <h1>Geluid</h1>
+                    <p> Geluid moet je kunnen voelen, maar ook zuiver zijn! Het afstellen van je audio? Jan is de man die het kan!</p>
+                </div>
+            </div>
+            <div class="slide"
+                 style="background: url('https://www.sikkom.nl/wp-content/uploads/2020/06/ec67374c50b9edf583ad285be6a14136-1-1600x600.jpg') no-repeat center top/cover;">
+                <div class="content">
+                    <h1>Lasers</h1>
+                    <p>CJM heeft al jaren ervaring met het bedienen en afstellen van Lasers.
+                        Voor de beste lasershows kunt u ons dan ook altijd bereiken!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <template id="newSlide">
+            <div class="slide">
+                <div class="content">
+                    <h1 class="fotoTitel">Slide Four</h1>
+                    <p class="fotoBeschrijving">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic
+                        maxime, voluptatibus labore doloremque vero!
+                    </p>
+                </div>
+            </div>
+        </template>
+
+        <div class="buttons">
+            <button id="prev">&#x2039;</button>
+            <button id="next">&#x203A;</button>
+            <button id="infoButton">Klik hier voor meer informatie!</button>
+        </div>
+    </section>
+    <section>
+        <div id="extrainfo">
+            <h1>CJM en Licht en Geluid!</h1>
+            <p>meer toenadering. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit nec libero quis
+                venenatis. Nulla facilisi. Pellentesque ex mauris, sollicitudin in orci vitae, faucibus lacinia orci.
+                Donec
+                at leo magna. Etiam vitae fermentum turpis, at facilisis lacus. Donec id turpis massa. Fusce non mi et
+                dui
+                vehicula iaculis fringilla eget erat. Etiam interdum lectus sit amet semper lobortis. Quisque vel mi
+                euismod, sodales orci vel, euismod mauris. Aliquam id erat ut mi ultrices fringilla nec id nulla. Donec
+                id
+                nulla sed mauris dignissim consequat in in erat. Proin congue pulvinar vehicula. Ut ut dolor vitae ipsum
+                pretium laoreet eget quis augue. Duis aliquet velit eu metus placerat suscipit.</p><br>
+
+            <p>Ut nunc odio, gravida vitae purus nec, iaculis posuere nunc. Vivamus ante risus, venenatis ac fringilla
+                ut,
+                condimentum vel elit. Aenean ullamcorper magna nec porta fermentum. Sed vitae auctor elit. Mauris et
+                odio
+                eleifend, tincidunt tortor in, sodales nisl. In consequat commodo quam, et volutpat ante pretium sed.
+                Class
+                aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In consectetur
+                arcu in
+                suscipit congue. Duis viverra eget nulla nec vulputate. Curabitur eget molestie elit. Fusce at risus
+                nisl.
+                Sed sodales fermentum laoreet.</p><br>
+
+            <p>Maecenas sit amet aliquam arcu. Fusce scelerisque, mi non lacinia facilisis, ligula nisi lacinia diam, id
+                porta lacus libero vitae augue. Nulla facilisi. Nunc tortor urna, tempor vitae nunc a, pharetra suscipit
+                magna. In ultricies, sem ac posuere ultricies, neque sapien laoreet quam, quis aliquam augue libero non
+                dui.
+                Pellentesque scelerisque venenatis velit at vestibulum. Integer eu fermentum est. Vestibulum ullamcorper
+                velit non nisl convallis, a dignissim mauris porttitor. Integer in mi scelerisque, mattis leo in,
+                gravida
+                enim.</p><br>
+
+            <p>Duis nec pretium leo. Pellentesque eleifend quam ligula, ut mollis massa commodo ut. Nunc rutrum velit
+                quis
+                quam lobortis, et ornare lacus commodo. Ut id mollis neque. Curabitur porttitor ipsum a elit rutrum
+                elementum. Pellentesque vel odio ac leo elementum semper. Morbi a felis orci. Vestibulum ante ipsum
+                primis
+                in faucibus orci luctus et ultrices posuere cubilia curae; Fusce et justo eu velit rutrum vehicula. Sed
+                malesuada tempor neque ut malesuada. Morbi eu neque ut nisl sagittis lacinia. Maecenas ut congue tellus,
+                vitae ultrices arcu. Proin feugiat ante ut iaculis egestas. Fusce ornare, tellus et viverra iaculis,
+                turpis
+                lectus accumsan velit, a bibendum erat dolor sit amet nisl. Nam quam ex, pulvinar sit amet nisi in,
+                consequat hendrerit est. Vestibulum imperdiet diam ut pulvinar mattis.</p><br>
+
+            <p>Morbi vitae lacus at orci ornare pellentesque non id urna. Donec gravida eleifend posuere. Ut varius
+                tortor
+                nec neque ullamcorper, vitae venenatis tellus molestie. Suspendisse imperdiet, lectus ut iaculis
+                scelerisque, lectus diam tincidunt purus, in pretium nisl nisl non nisl. Quisque ac lacus lorem. Nulla
+                pellentesque accumsan enim, venenatis hendrerit nisl sollicitudin at. Nunc scelerisque egestas nulla
+                vestibulum tristique. Donec posuere rutrum quam ut hendrerit. Integer fermentum et erat nec suscipit.
+                Vestibulum nec feugiat dui. Cras mollis tristique ultricies. Nullam tincidunt dapibus dui, sit amet
+                dignissim libero suscipit in. Nulla facilisi.</p><br>
+        </div>
+    </section>
+</main>
+<script src="JavaScript/branchepage/getLeGFotoScript.js"></script>
+<script src="JavaScript/branchepage/sliderScript.js"></script>
 <script src="JavaScript/security/adminscript.js"></script>
-</body>
-</html>

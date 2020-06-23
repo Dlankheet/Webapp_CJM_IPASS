@@ -1,24 +1,24 @@
 const submitContactButton = document.getElementById("submitContact");
-submitContactButton.addEventListener("click",(event) => contactverzoekMaken(event))
+submitContactButton.addEventListener("click", (event) => contactverzoekMaken(event))
 
-function contactverzoekMaken(event){
+function contactverzoekMaken(event) {
     event.preventDefault();
     let formData = new FormData(document.querySelector("#contactenblokform"));
     let encData = new URLSearchParams(formData.entries());
-    if(formData.get("name") !== "" && formData.get("fmail") !== "" && formData.get("fnummer") !== "" && formData.get("ftitle") !== "" && formData.get("fnote") !== ""){
+    if (formData.get("name") !== "" && formData.get("fmail") !== "" && formData.get("fnummer") !== "" && formData.get("ftitle") !== "" && formData.get("fnote") !== "") {
         fetch("/restservices/contactaanvragen", {method: "POST", body: encData})
             .then(function (response) {
                 if (response.ok) {
                     alert("Contactverzoek is verzonden!")
                     document.querySelector("#contactenblokform").reset();
                     return response.json();
-                }else{
+                } else {
                     alert("Voer geldige informatie in.")
                 }
 
             })
             .then(data => console.log(data))
-    }else{
+    } else {
         alert("Niet alle velden zijn ingevuld!")
     }
-    }
+}

@@ -32,4 +32,4 @@ class WebsiteTest {
         assertFalse(website.getContactVerzoeken().contains(testverzoek));
 
     }
-}
+}// Tests bekijken bigshopper.

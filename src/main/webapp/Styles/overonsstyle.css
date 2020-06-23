@@ -1,0 +1,16 @@
+main{
+    display: flex;
+}
+#informatie{
+    flex-direction: column;
+    margin: 0 40px;
+}
+#reviews{
+    height: calc(100vh - 106px);
+    border-style: solid;
+}
+
+.onpage-review{
+    display: block;
+    margin-bottom: 10px;
+}

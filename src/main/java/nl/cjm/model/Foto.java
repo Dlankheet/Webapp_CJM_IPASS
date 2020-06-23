@@ -5,14 +5,25 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class Foto implements Serializable {
-    private Path padNaarFoto;
-    private String altText;
-    public Foto(String pad, String txt){
-        this.padNaarFoto = Paths.get(pad);
-        this.altText = txt;
+    private String fotoBase64;
+    private String titel;
+    private String beschrijving;
+
+    public Foto(String foto, String tt, String desc){
+        this.fotoBase64 = foto;
+        this.beschrijving = desc;
+        this.titel = tt;
     }
 
-    public Path getPadNaarFoto() {
-        return padNaarFoto;
+    public String getFotoBase64() {
+        return fotoBase64;
+    }
+
+    public String getTitel() {
+        return titel;
+    }
+
+    public String getBeschrijving() {
+        return beschrijving;
     }
 }

@@ -55,7 +55,6 @@ public class reviewRecourse {
                     System.out.println("Opslaan niet gelukt");
                     e.printStackTrace();
                 }
-                //emailRecourse.sendMail(email, titel, beschrijving);
                 return Response.ok(review).build();
             }
     }}
