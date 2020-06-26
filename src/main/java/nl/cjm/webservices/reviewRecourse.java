@@ -47,7 +47,7 @@ public class reviewRecourse {
                 try {
                     website.addPendingReview(review);
                     PersistenceManager.saveWebsiteToAzure();
-                    //emailRecourse.sendContactMail(review);
+                    emailRecourse.sendReviewMail(review);
                     return Response.ok(review).build();
                 } catch (IOException | IllegalArgumentException fout) {
                     fout.printStackTrace();

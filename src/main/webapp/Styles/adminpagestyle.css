@@ -20,19 +20,14 @@ main > div{
 .contact-blok > article{
     margin-bottom: 10px;
 }
-.review-blok{
-
-}
 
 .adminform{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .adminform > *{
-
-}
-
-.fotoslide-lightandsound-blok{
+    padding: 10px;
 
 }
