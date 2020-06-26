@@ -1,16 +1,34 @@
 main{
-    display: flex;
+    display: grid;
+    grid-template-columns:[line1] auto[infoblok] 250px[reviewbar];
+    grid-template-rows: [start] auto[middle] 200px [end]
 }
+
 #informatie{
+    grid-column-start: line1;
+    grid-column-end: reviewbar;
+    grid-row-start: 1;
     flex-direction: column;
-    margin: 0 40px;
+    width: calc(100vw - 250px);
 }
+
 #reviews{
+    grid-row-start: 1;
+    grid-row-end: end;
+    grid-column-start: infoblok;
     height: calc(100vh - 106px);
-    border-style: solid;
+    width: 250px;
 }
 
 .onpage-review{
     display: block;
     margin-bottom: 10px;
+}
+footer{
+    grid-row-start: middle;
+}
+footer > img{
+    bottom: 0;
+    height: 200px;
+    width: calc(100vw - 250px);
 }

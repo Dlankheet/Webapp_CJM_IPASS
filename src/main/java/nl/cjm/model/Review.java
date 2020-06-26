@@ -6,7 +6,7 @@ public class Review extends GastBlok {
     private int aantalSterren;
     private String onderbouwing;
 
-    public Review(String nm, String em, int tel, String onderbouwing, String dt, int aS) {
+    public Review(String nm, String em, String tel, String onderbouwing, String dt, int aS) {
         super(nm, em, tel, dt);
         this.aantalSterren = aS;
         this.onderbouwing = onderbouwing;
@@ -15,9 +15,11 @@ public class Review extends GastBlok {
     public int getAantalSterren() {
         return aantalSterren;
     }
+
+    //Als de data in de andere lijst komt, wordt email en telefoon op null gezet omdat dit gevoelige informatie is.
     public void setPrivateinfoNull(){
         this.email = null;
-        this.telefoon = 0;
+        this.telefoon = null;
     }
 
     public String getOnderbouwing() {

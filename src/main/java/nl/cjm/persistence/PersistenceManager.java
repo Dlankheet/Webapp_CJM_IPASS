@@ -27,7 +27,6 @@ public class PersistenceManager {
                 if(obj instanceof Website){
                     Website loadedwebsite = (Website) obj ;
                     Website.setWebsite(loadedwebsite);
-                    System.out.println(loadedwebsite.getContactVerzoeken());
                 }
                 baos.close();
                 ois.close();

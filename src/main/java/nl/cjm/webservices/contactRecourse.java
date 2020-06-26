@@ -13,6 +13,7 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -33,32 +34,28 @@ public class contactRecourse {
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
     public Response dienContactverzoekIn(@FormParam("fname") String naam,
-                                         @FormParam("fmail") String email, @FormParam("fnummer") int telefoon,
+                                         @FormParam("fmail") String email, @FormParam("fnummer") String telefoon,
                                          @FormParam("ftitle") String titel, @FormParam("fnote") String beschrijving
     ) {
         Date datuminnummers = new Date();
         SimpleDateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         String datum = formatter.format(datuminnummers);
-        if (naam == null || email == null || telefoon == 0 || titel == null || beschrijving == null) {
-            return Response.status(Response.Status.BAD_REQUEST).build();
+        if (naam == null || email == null || telefoon == null || titel == null || beschrijving == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity(new AbstractMap.SimpleEntry<String,String>("Error", "U heeft een gegeven niet ingevoerd")).build();
         } else {
             Contactblok contactverzoek = new Contactblok(naam, email, telefoon, titel, beschrijving, datum);
-            if (website.getContactVerzoeken().contains(contactverzoek)) {
-                return Response.status(Response.Status.BAD_REQUEST).build();
-            } else {
-                website.addContactverzoek(contactverzoek);
                 try {
+                    website.addContactverzoek(contactverzoek);
                     PersistenceManager.saveWebsiteToAzure();
                     emailRecourse.sendContactMail(contactverzoek);
-                } catch (IOException e) {
+                } catch (IOException | IllegalArgumentException fout) {
                     System.out.println("Opslaan niet gelukt");
-                    e.printStackTrace();
+                    fout.printStackTrace();
+                    return Response.status(Response.Status.BAD_REQUEST).entity(new AbstractMap.SimpleEntry<String,String>("Error", fout.getMessage())).build();
                 }
-                //emailRecourse.sendMail(email, titel, beschrijving);
                 return Response.ok(contactverzoek).build();
             }
         }
-    }
 
     @DELETE
     @Produces(MediaType.APPLICATION_JSON)

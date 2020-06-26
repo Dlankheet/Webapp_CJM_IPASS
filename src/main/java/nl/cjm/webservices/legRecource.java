@@ -32,10 +32,8 @@ public class legRecource {
                             @FormParam("fotoBase64") String foto) {
         try{
             Foto fotoObject = new Foto(foto, titel, beschrijving);
-            boolean gelukt = website.addLeGFoto(fotoObject);
-            if(gelukt){
-                return Response.ok(fotoObject).build();
-            } else return Response.status(Response.Status.BAD_REQUEST).build();
+            website.addLeGFoto(fotoObject);
+            return Response.ok(fotoObject).build();
 
         }catch(Exception e){
             return Response.status(Response.Status.BAD_REQUEST).build();

@@ -6,7 +6,7 @@ public class Contactblok extends GastBlok{
     private String titel;
     private String beschrijving;
 
-    public Contactblok(String nm, String em, int tel, String tt, String bs, String dt) {
+    public Contactblok(String nm, String em, String tel, String tt, String bs, String dt) {
         super(nm, em, tel, dt);
         this.titel = tt;
         this.beschrijving = bs;

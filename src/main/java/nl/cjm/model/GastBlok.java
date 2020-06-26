@@ -1,14 +1,15 @@
 package nl.cjm.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public abstract class GastBlok implements Serializable {
     protected String naam;
     protected String email;
-    protected int telefoon; //Bij gebruik van +31 of nullen is het handiger om strings te gebruiken.
+    protected String telefoon; //Wiskundige expressies zijn niet nodig bij een telefoonnummer dus dat kan een string zijn.
     protected String datum;
 
-    public GastBlok(String nm, String em, int tel, String dt) {
+    public GastBlok(String nm, String em, String tel, String dt) {
         this.naam = nm;
         this.email = em;
         this.telefoon = tel;
@@ -23,13 +24,20 @@ public abstract class GastBlok implements Serializable {
         return email;
     }
 
-    public int getTelefoon() {
+    public String getTelefoon() {
         return telefoon;
     }
 
     public String getDatum() {
         return datum;
     }
-// TODO: 23-6-2020 Schrijven equals voor 4 variabelen
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof GastBlok)) return false;
+        GastBlok gastBlok = (GastBlok) o;
+        return datum.equals(gastBlok.datum); //Datum is uniek per verzoek.
+    }
 
 }

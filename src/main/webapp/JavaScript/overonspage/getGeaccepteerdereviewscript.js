@@ -1,6 +1,6 @@
 function stringWithoutSpaces(text) {
     //debugger;
-    return text.replace(/ /g,'_');
+    return text.replace(/ /g, '_');
 }
 
 function addReview(rating, beschrijving, datum) {
@@ -13,13 +13,24 @@ function addReview(rating, beschrijving, datum) {
     review_class.setAttribute('id', datum_zonder_spatie);
 
     const review_titel = template_clone.querySelector('.review-aantal-sterren');
-    review_titel.innerHTML  = "Aantal ontvangen sterren:" + rating;
+    if (rating === 5) {
+        review_titel.innerHTML = "<img src='/images/five-stars.png' alt='Five Stars' width='209' height='70'>"
+    } else if (rating === 4) {
+        review_titel.innerHTML = "<img src='/images/four-stars.png' alt='Four Stars' width='209' height='70'>"
+    } else if (rating === 3) {
+        review_titel.innerHTML = "<img src='/images/three-stars.png' alt='Three Stars' width='209' height='70'>"
+    } else if (rating === 2) {
+        review_titel.innerHTML = "<img src='/images/two-stars.png' alt='Two Stars' width='209' height='70' >"
+    } else {
+        review_titel.innerHTML = "<img src='/images/one-star.png' alt='One Star' width='209' height='70' >";
+    }
+
 
     const review_date = template_clone.querySelector('.review-date');
-    review_date.innerHTML  = datum;
+    review_date.innerHTML = datum;
 
     const review_beschrijving = template_clone.querySelector('.review-toelichting');
-    review_beschrijving.innerHTML  = "<b>Beschrijving:</b>" + beschrijving;
+    review_beschrijving.innerHTML = "<b>Beschrijving:</b>" + beschrijving;
 
 
     //Maak fragment en voeg het toe aan de website
