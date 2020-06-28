@@ -21,7 +21,7 @@ public class reviewGoedkeuren {
     @Produces(MediaType.APPLICATION_JSON)
     @RolesAllowed("administrator")
     @Path("{datum}")
-    public Response acceptReview(@Context SecurityContext securityContext, @PathParam("datum") String datum) {    // TODO: 22-6-2020 Deze functie werkt nog niet.
+    public Response acceptReview(@Context SecurityContext securityContext, @PathParam("datum") String datum) {
         for (Review review : website.getPendingReviews()) {
             String date = review.getDatum();
             date = date.replaceAll(" ", "_");

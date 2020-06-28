@@ -23,6 +23,7 @@ public class reviewRecourse {
     Website website = Website.getWebsite();
 
     @GET
+    @RolesAllowed("administrator")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getPendingReviews(){
         ArrayList<GastBlok> reviews = new ArrayList<>();

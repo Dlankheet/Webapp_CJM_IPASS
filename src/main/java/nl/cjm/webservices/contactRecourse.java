@@ -80,6 +80,7 @@ public class contactRecourse {
     }
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @RolesAllowed("administrator")
     @Path("{datum}")
     public Response getContactverzoek(@Context SecurityContext securityContext, @PathParam("datum") String datum) {
         for (Contactblok contact : website.getContactVerzoeken()) {

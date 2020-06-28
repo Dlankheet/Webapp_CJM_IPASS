@@ -17,6 +17,9 @@ main > div{
 .contactverzoek-content > .verzoek-date{
     color: gray;
 }
+.review-content > .review-date{
+    color: gray;
+}
 .contact-blok > article{
     margin-bottom: 10px;
 }
