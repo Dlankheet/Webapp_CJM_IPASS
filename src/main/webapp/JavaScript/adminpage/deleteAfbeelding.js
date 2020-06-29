@@ -11,7 +11,6 @@ function removeItem(titelzonderspatie, event, fetchLocation) {
         .then(alert("Foto is succesvol verwijdert!"))
         .catch(error => {
             console.log(error)
-            alert("Er is iets mis gegaan. Neem contact op met de beheerder.")
         });
 }
 
