@@ -13,22 +13,24 @@ public class ServletContextListener implements javax.servlet.ServletContextListe
 
     @Override
     public void contextInitialized(ServletContextEvent sce){
-        new MyUser("Daniel", "iets12");
+        new MyUser("Daniel", "test123");
         new MyUser("Testaccount", "test123");
-        try {
-            PersistenceManager.loadWebsiteFromAzure();
-        } catch (IOException | ClassNotFoundException e) {
-            System.out.println("Binnenhalen niet gelukt");
-            e.printStackTrace();
-        }
+        //Un-comment this if you want to make blob-storage working again.
+//        try {
+//            PersistenceManager.loadWebsiteFromAzure();
+//        } catch (IOException | ClassNotFoundException e) {
+//            System.out.println("Binnenhalen niet gelukt");
+//            e.printStackTrace();
+//        }
     }
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-        try {
-            PersistenceManager.saveWebsiteToAzure();
-        } catch (IOException e) {
-            System.out.println("Opslaan niet gelukt");
-            e.printStackTrace();
-        }
+        //Un-comment this if you want to make blob-storage working again.
+//        try {
+//            //PersistenceManager.saveWebsiteToAzure();
+//        } catch (IOException e) {
+//            System.out.println("Opslaan niet gelukt");
+//            e.printStackTrace();
+//        }
     }
 }
